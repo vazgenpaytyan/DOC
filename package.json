@@ -1,0 +1,26 @@
+{
+  "name": "DOC",
+  "version": "1.0.0",
+  "description": "DOC project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "node app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "D-WAVE",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mssql": "^6.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
