@@ -1,17 +1,14 @@
-const mssql = require("mssql")
 require('dotenv').config()
+const { Pool } = require('pg')
 
-const pool = new mssql.ConnectionPool({
-    host: process.env.HOST,
-    server: process.env.SERVER,
-    user: process.env.DB_LOGIN,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: 1433,
-    options: {
-        enableArithAbort: false
-    }
+const pool = new Pool({
+    user: process.env.user,
+    host: process.env.host,
+    database: process.env.database,
+    password: process.env.password,
+    port: process.env.port
 })
+
 
 module.exports = pool
 
