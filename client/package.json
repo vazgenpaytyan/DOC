@@ -6,9 +6,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@tinymce/tinymce-react": "^3.6.0",
+    "@trendmicro/react-checkbox": "^3.4.1",
+    "@trendmicro/react-dropdown": "^1.4.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-folder-tree": "^3.0.0",
+    "react-icons": "^3.10.0",
+    "react-infinite-tree": "^1.0.0",
+    "react-scripts": "3.4.1",
+    "react-use-context-menu": "^0.1.4",
+    "styled-components": "^5.1.1",
+    "tinymce": "^5.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,10 +26,19 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "script": [
+    "node_modules/tinymce/tinymce.min.js",
+    "node_modules/tinymce/themes/modern/theme.js"
+  ],
+  "styles": [
+    "node_modules/tinymce/skins/lightgray/skin.min.css",
+    "node_modules/tinymce/skins/lightgray/content.min.css",
+    "node_modules/tinymce/skins/lightgray/content.inline.min.css"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:3000",
   "browserslist": {
     "production": [
       ">0.2%",
