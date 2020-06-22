@@ -10,8 +10,8 @@ function RichEditor() {
             //tinymceScriptSrc='tinymce.min.js'
             init={{
 
-                height: 600,
-                width: 1200,
+                height: 595,
+                width: 842,
                 save_enablewhendirty: true,
                 plugins: [
                     'advlist save lists emoticons link image charmap print preview anchor',

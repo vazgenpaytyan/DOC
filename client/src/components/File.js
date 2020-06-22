@@ -23,7 +23,7 @@ function File({ id, name }) {
   return (
     <div onClick={() => fileContext.fileDispatch(id)} key={name}>
       <StyledFile>
-        <a style={{ color: "#a57373" }} href="#">
+        <a style={{ color: "#a57373" }} href={`/files/${id}`} target="_blank">
           {FILE_ICONS[ext] || <AiOutlineFile />}
           <span>{name}</span>
         </a>

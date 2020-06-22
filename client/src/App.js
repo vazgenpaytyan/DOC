@@ -6,11 +6,12 @@ import AddEmployee from './components/AddEmployee'
 import { Admin, User } from './models/role'
 import DocumentPreview from './components/DocumentPreview'
 import Tree from './components/Tree'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
 
 export const FileContext = React.createContext()
 
 function App() {
-
   const structure = [
     {
       type: "folder",
@@ -36,10 +37,11 @@ function App() {
     id: null,
     role: null,
     isLoggedIn: false,
-    file: "ff"
+    file: "<h2 style='padding:20px;'> No Data</h2>"
   }
 
   const reducer = (state, action) => {
+
     switch (action) {
       case 1:
         return {
@@ -81,6 +83,9 @@ function App() {
   const { id, role, isLoggedIn, file } = user
   return (
     <div className="App">
+      <Router>
+        <Route exact path="/files/:id" component={DocumentPreview} />
+      </Router>
       <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <a className="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,7 +110,6 @@ function App() {
       <div className="d-flex flex-row">
         <FileContext.Provider value={{ fileState: file, fileDispatch: dispatch }}>
           <Tree data={structure} />
-          <DocumentPreview file={file} />
         </FileContext.Provider>
       </div>
     </div>

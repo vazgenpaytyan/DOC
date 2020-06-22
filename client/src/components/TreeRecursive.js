@@ -8,7 +8,7 @@ function TreeRecursive({ data }) {
 
         if (item.type === 'folder') {
             return (
-                <Folder key={item.name} name={item.name}>
+                <Folder key={item.name} id={item.id} name={item.name}>
                     <TreeRecursive data={item.childrens} />
                 </Folder>
             )
