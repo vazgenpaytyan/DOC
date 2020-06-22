@@ -25,8 +25,8 @@ function App() {
             { id: 1, type: "file", name: "Modal.cs" }
           ]
         },
-        { id: 1, type: "file", name: "index.js" },
-        { id: 2, type: "file", name: "index.html" }
+        { id: 3, type: "file", name: "index.js" },
+        { id: 4, type: "file", name: "index.html" }
       ]
     },
     { id: 6, type: "file", name: "package.xlsx" }
@@ -50,6 +50,16 @@ function App() {
         return {
           ...state,
           file: "<h2 style='padding:20px;'> Data 2 </h2>"
+        }
+      case 3:
+        return {
+          ...state,
+          file: "<h1 style='padding:20px;'> Data 3 </h1>"
+        }
+      case 4:
+        return {
+          ...state,
+          file: "<h2 style='padding:20px;'> Data 4 </h2>"
         }
       default:
         return {
