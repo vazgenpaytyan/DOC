@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* font-family: serif; */
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./Login/backgrounds/b.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form {
+  width: 420px;
+  background: #f1f1f1;
+  height: 600px;
+  padding: 80px 40px;
+  border-radius: 0;
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* transform: translate(-100px, 40px); */
+}
+
+.login-form h1 {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.txtb {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+.txtb input {
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtb span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  background-size: 200%;
+}
+
+.logbtn {
+  background-color: black;
+}
+.fb {
+  background-color: rgb(11, 76, 151);
+  margin-top: 50px;
+}
+.google {
+  background-color: rgb(34, 136, 219);
+  margin-top: 10px;
+}
+.bottom-text {
+  /* margin-top: 10px; */
+  text-align: start;
+  font-size: 13px;
+}
+
+span:focus::placeholder {
+  color: transparent;
+}
+.logbtn,
+.fb,
+.google {
+  border-radius: 3px;
+}
+
+hr {
+  color: rgba(155, 155, 155, 0.5);
+  border-color: rgba(155, 155, 155, 0.5);
+  overflow: visible;
+  text-align: center;
+  height: 1px;
+  margin-top: 37px;
+  margin-bottom: -30px;
+  /*margin-bottom: 7px;*/
+}
+
+hr:after {
+  content: "or";
+  /*padding: 0 4px;*/
+  position: relative;
+  /* margin: 16px;*/
+  top: -11px;
+  padding: 7px;
+  background-color: #f1f1f1;
+}
+.text {
+  font-size: 14px;
+  margin-top: 15px;
+}

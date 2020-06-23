@@ -19,13 +19,13 @@ app.post("/api/auth/register", async (req, res) => {
         await pool.query('insert into "users" ("email","password") values ($1,$2)',
             [email, hash])
 
-            const payLoad = {
-                "email": req.body.email
-            }
+        const payLoad = {
+            "email": req.body.email
+        }
 
-            const token = jwt.sign(payLoad, JWT_SECRET, { algorithm: 'HS256', expiresIn: '1d' })
-            pool.query('update "users" set "token" = $1 where "email" = $2', [token, req.body.email])
-            res.cookie('token', token)
+        const token = jwt.sign(payLoad, JWT_SECRET, { algorithm: 'HS256', expiresIn: '1d' })
+        pool.query('update "users" set "token" = $1 where "email" = $2', [token, req.body.email])
+        res.cookie('token', token)
 
 
         res.status(200).json({ registered: true })
